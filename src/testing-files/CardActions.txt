@@ -1,0 +1,21 @@
+# Empty lines and lines starting with # will be ignored
+
+# The format for Card Action is,
+# Usernum,Cardnum,Action,Num (only if Action is AddBalance)
+# Current Actions are Suspend, Unsuspend, AddBalance, RemoveCard, AddCard
+
+7446,95581466,AddBalance,20
+8997,15151789,Suspend
+6602,80586941,AddBalance,10
+
+1204,50127536,Unsuspend
+1204,50127536,Suspend
+1204,50127536,Suspend
+1204,50127536,Suspend
+1204,50127536,RemoveCard
+1204,71044126,Unsuspend
+1204,696969696,AddCard
+1204,696969696,Unsuspend
+1204,696969696,Suspend
+1204,696969696,Suspend
+1204,71044126,Unsuspend

@@ -1,0 +1,10 @@
+# Empty lines and Lines starting with # will be ignored
+
+# File used by the TransitSystem class to initialize all the <BusRoute>
+# and <SubwayRoute>. The format is:
+# Type,Name,Stop1,Stop2,...,LastStop
+
+subway,Finch,F,G,C,H,I
+bus,50W,Y,G,X
+bus,100W,A,B,C,D,E
+bus,110N,J,G,H,K,L

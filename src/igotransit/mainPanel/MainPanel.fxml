@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="igotransit.mainPanel.MainPanelController">
+   <left>
+      <Pane prefHeight="814.0" prefWidth="201.0" style="-fx-background-color: #525A65;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="31.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="homeBar" fitHeight="17.0" fitWidth="116.0" layoutX="31.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="calendarBar" fitHeight="17.0" fitWidth="116.0" layoutX="31.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cardHoldersBar" fitHeight="17.0" fitWidth="116.0" layoutX="30.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="aboutUsBar" fitHeight="17.0" fitWidth="116.0" layoutX="31.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="58.0" layoutY="274.0" mnemonicParsing="false" onAction="#onHomePress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="56.0" layoutY="353.0" mnemonicParsing="false" onAction="#onCalendarPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Calendar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="58.0" layoutY="431.0" mnemonicParsing="false" onAction="#onCardHoldersPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Card Holders" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="68.0" layoutY="508.0" mnemonicParsing="false" onAction="#onAboutUsPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="About Us" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="31.0" layoutY="272.0" onMouseClicked="#onHomePressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="31.0" layoutY="351.0" onMouseClicked="#onCalendarPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/calendar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="30.0" layoutY="429.0" onMouseClicked="#onCardHoldersPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/cardholder.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="32.0" layoutY="506.0" onMouseClicked="#onAboutUsPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/about_us.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="3.0" layoutY="253.0" prefWidth="200.0" />
+            <Button layoutX="67.0" layoutY="583.0" mnemonicParsing="false" onAction="#onSignOutPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Sign Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="logOutBar" fitHeight="17.0" fitWidth="116.0" layoutX="30.0" layoutY="617.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="32.0" layoutY="582.0" onMouseClicked="#onSignOutPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/door.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <TabPane fx:id="transitTab" prefHeight="200.0" prefWidth="200.0" style="-fx-tab-max-height: 500; -fx-padding: -20;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #F7F8FA;">
+                     <children>
+                        <Pane layoutX="32.0" layoutY="98.0" prefHeight="146.0" prefWidth="172.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AVERAGE TRIP TIME">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="13.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="averageTripTime" fill="#5a5a5a" layoutX="86.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0m">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="13.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/clock.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane layoutX="21.0" layoutY="14.0" prefHeight="48.0" prefWidth="779.0" style="-fx-background-color: #ffff;">
+                           <children>
+                              <Text layoutX="695.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dimitry W" />
+                              <Pane layoutX="655.0" layoutY="8.0" prefHeight="32.0" prefWidth="34.0" style="-fx-background-color: #9F9696; -fx-background-radius: 50;" />
+                              <Text fx:id="currTimeLbl" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="January 1st, 2020, 10:59 am">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children></Pane>
+                        <Pane layoutX="227.0" layoutY="98.0" prefHeight="146.0" prefWidth="172.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AVERAGE DISTANCE">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="averageDistanceLbl" fill="#5a5a5a" layoutX="87.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/road.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane layoutX="418.0" layoutY="98.0" prefHeight="146.0" prefWidth="172.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODAY'S TRIPS">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/ground_transportation.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="dailyTripsLbl" fill="#5a5a5a" layoutX="97.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                           </children></Pane>
+                        <Pane layoutX="607.0" layoutY="98.0" prefHeight="146.0" prefWidth="165.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODAY'S PROFIT">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="18.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="dailyProfitLbl" fill="#5a5a5a" layoutX="87.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="8.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/bank_card.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane layoutX="32.0" layoutY="274.0" prefHeight="297.0" prefWidth="458.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <ImageView fitHeight="266.0" fitWidth="470.0" layoutX="-12.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/map/default_map.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEFAULT MAP">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="15.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="510.0" layoutY="275.0" prefHeight="297.0" prefWidth="252.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="15.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PIE CHART">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <PieChart fx:id="transitChart" layoutX="-38.0" layoutY="38.0" prefHeight="233.0" prefWidth="303.0" title="Bus vs. Subway" />
+                           </children></Pane>
+                        <Pane layoutX="21.0" layoutY="586.0" prefHeight="234.0" prefWidth="755.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRIP LOG">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="15.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <ListView fx:id="tripLogLst" layoutX="14.0" layoutY="45.0" prefHeight="162.0" prefWidth="717.0" style="-fx-background-radius: 10;" />
+                           </children></Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Calendar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="datePicker" layoutX="30.0" layoutY="32.0" onAction="#findTripsonDate" />
+                        <Text layoutX="33.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PICK A DATE" wrappingWidth="168.01602172851562">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="33.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIST OF TRIPS" wrappingWidth="168.01602172851562">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <ListView fx:id="lstTrips" layoutX="30.0" layoutY="85.0" prefHeight="274.0" prefWidth="746.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Card Holders">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="cardHolders" layoutX="28.0" layoutY="48.0" prefHeight="146.0" prefWidth="746.0" />
+                        <Text layoutX="28.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIST OF CARD HOLDERS" wrappingWidth="168.01602172851562">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="28.0" layoutY="206.0" mnemonicParsing="false" onAction="#getCardHolderInfo" style="-fx-background-color: #FFC107;" text="Get Information" />
+                        <ListView fx:id="recentTripsLst" layoutX="28.0" layoutY="240.0" prefHeight="100.0" prefWidth="746.0" />
+                        <ListView fx:id="cardsLst" layoutX="28.0" layoutY="360.0" prefHeight="91.0" prefWidth="749.0" />
+                        <Label fx:id="cardInfoLbl" layoutX="31.0" layoutY="507.0" prefHeight="47.0" prefWidth="752.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="About Us">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="331.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="32.0" layoutY="777.0" text="All icons used in this applications are owned by:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="416.0" layoutY="777.0" text="https://icons8.com" textFill="#0f5fae">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="272.0" text="In iGoTransit, we aspire">
+                           <font>
+                              <Font size="71.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="45.0" layoutY="373.0" text="to provide all of our customers">
+                           <font>
+                              <Font size="54.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="45.0" layoutY="471.0" text="with the best service possible!">
+                           <font>
+                              <Font size="54.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="22.0" layoutY="245.0" prefHeight="0.0" prefWidth="776.0" />
+                        <Separator layoutX="22.0" layoutY="562.0" prefHeight="0.0" prefWidth="776.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

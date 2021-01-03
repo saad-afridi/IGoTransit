@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="igotransit.userPanel.UserPanelController">
+   <center>
+      <TabPane fx:id="transitTab" prefHeight="200.0" prefWidth="200.0" style="-fx-tab-max-height: 500; -fx-padding: -20;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Home">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #F7F8FA;">
+                     <children>
+                        <Pane layoutX="32.0" layoutY="98.0" prefHeight="146.0" prefWidth="172.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AVERAGE TRIP TIME">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="13.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="averageTripTime" fill="#5a5a5a" layoutX="86.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0m">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="13.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/clock.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="21.0" layoutY="24.0" prefHeight="48.0" prefWidth="779.0" style="-fx-background-color: #ffff;">
+                           <children>
+                              <Text fx:id="nameLbl" layoutX="695.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Pane layoutX="655.0" layoutY="8.0" prefHeight="32.0" prefWidth="34.0" style="-fx-background-color: #9F9696; -fx-background-radius: 50;" />
+                              <Text fx:id="currTimeLbl" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="January 1st, 2020, 10:59 am">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="227.0" layoutY="98.0" prefHeight="146.0" prefWidth="172.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AVERAGE DISTANCE">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="averageDistanceLbl" fill="#5a5a5a" layoutX="87.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="14.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/road.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="418.0" layoutY="98.0" prefHeight="146.0" prefWidth="172.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL TRIPS">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/ground_transportation.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="totalTripsLbl" fill="#5a5a5a" layoutX="97.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="607.0" layoutY="98.0" prefHeight="148.0" prefWidth="161.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL BALANCE">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="18.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="totalBalanceLbl" fill="#5a5a5a" layoutX="87.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="91.0" fitWidth="74.0" layoutX="8.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/bank_card.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="32.0" layoutY="274.0" prefHeight="297.0" prefWidth="546.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <ImageView fitHeight="287.0" fitWidth="451.0" layoutX="106.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/map/default_map.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEFAULT MAP">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="15.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="21.0" layoutY="586.0" prefHeight="234.0" prefWidth="755.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRIP LOG (3 RECENT)">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="15.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <ListView fx:id="tripLogLst" layoutX="14.0" layoutY="45.0" prefHeight="96.0" prefWidth="717.0" style="-fx-background-radius: 10;" />
+                              <Button layoutX="342.0" layoutY="173.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: grey;" text="Donate">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="606.0" layoutY="274.0" prefHeight="148.0" prefWidth="158.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost per Month">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="18.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="costperMonth" fill="#5a5a5a" layoutX="79.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="60.0" fitWidth="93.0" layoutX="7.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/month.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Trips">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="40.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIST OF TRIPS" wrappingWidth="168.01602172851562">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <ListView fx:id="lstTrips" layoutX="37.0" layoutY="52.0" prefHeight="274.0" prefWidth="746.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Manage">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="cardsLst" layoutX="28.0" layoutY="48.0" prefHeight="146.0" prefWidth="746.0" />
+                        <Text layoutX="28.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIST OF CARDS" wrappingWidth="168.01602172851562">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="28.0" layoutY="206.0" mnemonicParsing="false" onAction="#getCardHolderInfo" style="-fx-background-color: #FFC107;" text="Get Information" />
+                        <Label fx:id="cardInfoLbl" layoutX="31.0" layoutY="507.0" prefHeight="47.0" prefWidth="752.0" />
+                        <Separator layoutX="21.0" layoutY="245.0" prefHeight="1.0" prefWidth="777.0" style="-fx-background-color: grey;" />
+                        <TitledPane fx:id="cardInfoPane" animated="false" layoutX="31.0" layoutY="260.0" text="Card Information">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="475.0" prefWidth="738.0">
+                                 <children>
+                                    <Button layoutX="237.0" layoutY="49.0" mnemonicParsing="false" onAction="#add10" style="-fx-background-color: #FFC107;" text="\$10">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="cardLbl" layoutX="127.0" layoutY="82.0" text="20745">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="108.0" fitWidth="281.0" layoutX="13.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/bank_card.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="19.0" layoutY="14.0" prefHeight="34.0" prefWidth="183.0" text="Selected Card:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="318.0" layoutY="49.0" mnemonicParsing="false" onAction="#add20" style="-fx-background-color: #FFC107;" text="\$20">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="237.0" layoutY="95.0" mnemonicParsing="false" onAction="#add50" prefHeight="38.0" prefWidth="133.0" style="-fx-background-color: #FFC107;" text="\$50">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="19.0" layoutY="185.0" mnemonicParsing="false" onAction="#suspendCard" prefHeight="63.0" prefWidth="133.0" style="-fx-background-color: red;" text="SUSPEND" textFill="WHITE" />
+                                    <Label layoutX="22.0" layoutY="145.0" text="Lost your card?">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="224.0" orientation="VERTICAL" prefHeight="277.0" prefWidth="0.0" />
+                                    <Label layoutX="237.0" layoutY="15.0" prefHeight="34.0" prefWidth="183.0" text="Balance to Add:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="385.0" layoutY="1.0" orientation="VERTICAL" prefHeight="277.0" prefWidth="0.0" />
+                                    <Label layoutX="406.0" layoutY="15.0" prefHeight="34.0" prefWidth="113.0" text="Card Status:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cardStatusLbl" layoutX="521.0" layoutY="15.0" prefHeight="34.0" prefWidth="203.0" text="ACTIVE" textFill="#1fb211">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="406.0" layoutY="51.0" prefHeight="34.0" prefWidth="113.0" text="Balance:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cardInfoLbl" layoutX="505.0" layoutY="50.0" prefHeight="34.0" prefWidth="221.0">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="237.0" layoutY="186.0" mnemonicParsing="false" onAction="#unsuspendCard" prefHeight="63.0" prefWidth="109.0" style="-fx-background-color: green;" text="UNSUSPEND" textFill="WHITE" />
+                                    <Label layoutX="236.0" layoutY="146.0" text="Card found?">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="406.0" layoutY="102.0" mnemonicParsing="false" onAction="#deleteCard" prefHeight="43.0" prefWidth="314.0" style="-fx-background-color: red;" text="DELETE CARD" textFill="WHITE" />
+                                    <Button layoutX="406.0" layoutY="155.0" mnemonicParsing="false" onAction="#addCard" prefHeight="43.0" prefWidth="314.0" style="-fx-background-color: green;" text="ADD CARD" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Trip Planner">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #F7F8FA;">
+                     <children>
+                        <Pane layoutX="40.0" layoutY="75.0" prefHeight="342.0" prefWidth="740.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;">
+                           <children>
+                              <ImageView fitHeight="325.0" fitWidth="535.0" layoutX="51.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/map/default_map.PNG" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEFAULT MAP">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="15.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/blue-bar.PNG" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ListView fx:id="tapsLst" layoutX="40.0" layoutY="552.0" prefHeight="180.0" prefWidth="544.0" />
+                        <Text layoutX="38.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAPS">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="38.0" layoutY="536.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/blue-bar.PNG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="finalizeTripBtn" disable="true" layoutX="588.0" layoutY="747.0" mnemonicParsing="false" onAction="#finalizeTripBtn" prefHeight="43.0" prefWidth="116.0" style="-fx-background-radius: 25;" text="Finalize Trip" />
+                        <ComboBox fx:id="tapCardSelect" layoutX="40.0" layoutY="467.0" prefWidth="150.0" />
+                        <Separator layoutX="24.0" layoutY="502.0" prefHeight="0.0" prefWidth="773.0" />
+                        <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="38.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/blue-bar.PNG" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="37.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SELECT CARD">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="planningBtn" layoutX="211.0" layoutY="422.0" mnemonicParsing="false" onAction="#startPlanningBtn" prefHeight="71.0" prefWidth="116.0" style="-fx-background-radius: 25;" text="Start Planning" />
+                        <Text layoutX="370.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROUTE NAME">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="371.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/blue-bar.PNG" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="routeComboBox" disable="true" layoutX="368.0" layoutY="472.0" onAction="#onSelectRouteName" prefHeight="25.0" prefWidth="106.0" promptText="E.g., Finch" />
+                        <ComboBox fx:id="tapLocationComboBox" disable="true" layoutX="510.0" layoutY="472.0" onAction="#onSelectTapLocation" prefHeight="25.0" prefWidth="80.0" promptText="E.g., F" />
+                        <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="515.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/blue-bar.PNG" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="515.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAP LOCATION">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="625.0" layoutY="427.0" orientation="VERTICAL" prefHeight="74.0" prefWidth="1.0" />
+                        <Separator layoutX="491.0" layoutY="427.0" orientation="VERTICAL" prefHeight="74.0" prefWidth="1.0" />
+                        <Text layoutX="646.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAP ACTION">
+                           <font>
+                              <Font name="Proxima Nova Alt Regular" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="4.0" fitWidth="126.0" layoutX="646.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/blue-bar.PNG" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="tapActionComboBox" disable="true" layoutX="641.0" layoutY="472.0" onAction="#onSelectTapAction" prefHeight="25.0" prefWidth="87.0" promptText="IN/OUT" />
+                        <Button fx:id="addTapBtn" disable="true" layoutX="40.0" layoutY="747.0" mnemonicParsing="false" onAction="#onAddTap" prefHeight="43.0" prefWidth="116.0" style="-fx-background-radius: 25;" text="Add Tap" />
+                        <TitledPane animated="false" layoutX="590.0" layoutY="552.0" prefHeight="178.0" prefWidth="202.0" text="Check Out">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="12.0" layoutY="53.0" text="Card Balance:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="76.0" text="Trip Fee:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cardBalanceLbl" layoutX="118.0" layoutY="53.0" prefHeight="26.0" prefWidth="67.0" text="\$0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="5.0" layoutY="100.0" text="-------------------------">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="116.0" text="New Balance: ">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="tripFeeLbl" layoutX="85.0" layoutY="76.0" prefHeight="26.0" prefWidth="67.0" text="\$0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="projectedBalanceLbl" layoutX="119.0" layoutY="116.0" prefHeight="26.0" prefWidth="67.0" text="\$0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="6.0" text="Card Number:">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="cardNumberLbl" layoutX="15.0" layoutY="25.0" prefHeight="26.0" prefWidth="163.0" text="0">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Pane layoutX="24.0" layoutY="14.0" prefHeight="48.0" prefWidth="779.0" style="-fx-background-color: #ffff;">
+                           <children>
+                              <Text fx:id="currTimeLblTwo" layoutX="303.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="January 1st, 2020, 10:59 am">
+                                 <font>
+                                    <Font name="Proxima Nova Alt Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Separator layoutX="152.0" layoutY="500.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="8.0" />
+                        <TextField fx:id="timeJumperTxt" layoutX="294.0" layoutY="512.0" prefHeight="25.0" prefWidth="46.0" />
+                        <Label layoutX="246.0" layoutY="511.0" prefHeight="28.0" prefWidth="47.0" text="Jump to" />
+                        <Label layoutX="343.0" layoutY="512.0" prefHeight="26.0" prefWidth="77.0" text="minutes later" />
+                        <Button layoutX="425.0" layoutY="513.0" mnemonicParsing="false" onAction="#timeJump" prefHeight="25.0" prefWidth="61.0" text="Jump" />
+                        <Label layoutX="503.0" layoutY="510.0" prefHeight="30.0" prefWidth="266.0" text="Time jump will add minintes to the local timer" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Settings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="34.0" layoutY="14.0" prefHeight="300.0" prefWidth="745.0" text="Profile">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Name:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="51.0" text="Email Adress:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="profileNameLbl" layoutX="80.0" layoutY="14.0" text="Name">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="profileEmailLbl" layoutX="140.0" layoutY="51.0" text="Email Address">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="677.0" layoutY="17.0" mnemonicParsing="false" onAction="#onNameChangeAction" text="Change" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <left>
+      <Pane prefHeight="814.0" prefWidth="201.0" style="-fx-background-color: #525A65;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="31.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="homeBar" fitHeight="17.0" fitWidth="116.0" layoutX="31.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tripsBar" fitHeight="17.0" fitWidth="116.0" layoutX="31.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="manageBar" fitHeight="17.0" fitWidth="116.0" layoutX="30.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="58.0" layoutY="274.0" mnemonicParsing="false" onAction="#onHomePress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="56.0" layoutY="353.0" mnemonicParsing="false" onAction="#onTripsPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Trips" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="58.0" layoutY="431.0" mnemonicParsing="false" onAction="#onManagePress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Manage" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="homeImg" fitHeight="28.0" fitWidth="39.0" layoutX="31.0" layoutY="272.0" onMouseClicked="#onHomePressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="31.0" layoutY="351.0" onMouseClicked="#onTripsPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/subway.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="30.0" layoutY="429.0" onMouseClicked="#onManagePressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/cardholder.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="3.0" layoutY="253.0" prefWidth="200.0" />
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="30.0" layoutY="508.0" onMouseClicked="#onTripPlannerPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/map.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tripPlannerBar" fitHeight="17.0" fitWidth="116.0" layoutX="30.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="58.0" layoutY="510.0" mnemonicParsing="false" onAction="#onTripPlannerPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Trip Planner" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="57.0" layoutY="584.0" mnemonicParsing="false" onAction="#onSettingsPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="settingstBar" fitHeight="17.0" fitWidth="116.0" layoutX="31.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="31.0" layoutY="582.0" onMouseClicked="#onSettingsPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="32.0" layoutY="656.0" onMouseClicked="#onSignOutPressIcon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/door.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logOutBar" fitHeight="17.0" fitWidth="116.0" layoutX="32.0" layoutY="692.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/selection-bar-state1.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="58.0" layoutY="658.0" mnemonicParsing="false" onAction="#onSignOutPress" style="-fx-background-color: transparent;" stylesheets="@../assets/style.css" text="Sign Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

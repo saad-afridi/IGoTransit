@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="igotransit.login.LoginPanelController">
+   <left>
+      <Pane prefHeight="400.0" prefWidth="180.0" style="-fx-background-color: #6E99D9;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="158.0" fitWidth="158.0" layoutX="17.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="73.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN SIGN IN">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="btnGoogle" fitHeight="58.0" fitWidth="257.0" layoutX="73.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/google.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="73.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="73.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="btnForgotPass" layoutX="151.0" layoutY="360.0" text="Forgot Password?" textFill="#6e99d9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="72.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#onMouseHover" onMouseExited="#onMouseExit" prefHeight="32.0" prefWidth="258.0" style="-fx-background-color: #6E99D9; -fx-background-radius: 10;" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="txtPassword" layoutX="76.0" layoutY="268.0" prefHeight="31.0" prefWidth="252.0" />
+            <TextField fx:id="emailTxt" layoutX="76.0" layoutY="195.0" prefHeight="31.0" prefWidth="253.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

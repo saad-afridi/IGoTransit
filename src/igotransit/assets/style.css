@@ -1,0 +1,23 @@
+.button:hover {
+	-fx-text-fill: #F3B807;
+	-fx-scale-y: 1.1;
+}
+
+.button:pressed {
+	-fx-text-fill: #ffffff;
+	-fx-scale-y: 0.9;
+	-fx-scale-x: 0.9;
+
+}
+
+.button {
+	-fx-text-fill: #ffffff;
+}
+
+.homeImg:hover {
+	-fx-image: url("/igotransit/assets/icons_yellow/home.png");
+}
+
+.homeImg {
+	-fx-image: url("/igotransit/assets/home.png");
+}
