@@ -19,12 +19,9 @@ A Java program that simulates electronic transit systems in Canada ie. PRESTO, T
 To use this program, clone the repository and run IGoTransit.java in src/igotransit. 
 
 #### Logging in as an Admin
-
-   Username: admin 
-   Password: admin 
+**Username**: admin | **Password**: admin 
 
 #### Logging in as a User
-   Username: Cardholder #  
-   Password: CardHolder # 
-   (you can find them at testing-files/CardHolders.txt) 
+**Username**: Cardholder Account Number | **Password**: CardHolder Account number 
+(you can find them at testing-files/CardHolders.txt) 
    
