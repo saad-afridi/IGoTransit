@@ -23,5 +23,5 @@ To use this program, clone the repository and run IGoTransit.java in src/igotran
 
 #### Logging in as a User
 **Username**: Cardholder Account Number | **Password**: CardHolder Account Number 
-(you can find them ![here](../blob/main/src/testing-files/CardHolders.txt))
+(you can find them [here](../blob/main/src/testing-files/CardHolders.txt))
    
