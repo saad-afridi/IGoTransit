@@ -1,2 +1,15 @@
 # IGoTransit
-A Java program that simulates electronic transit payment systems in Canada ie. PRESTO, TTC etc.
+A Java program that simulates electronic transit systems in Canada ie. PRESTO, TTC etc. There are two types of users in this program i.e. Admins and Cardholders. Cardholders are civilians utilizing the transportation while the Admin is the owner/manager of said transportation system. 
+
+To use this program, clone the repository and run IGoTransit.java in src/igotransit.
+
+### Tools and Technology
+![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/GUI-JavaFX-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Editor-Eclipse-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/OS-Windows-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a)
+
+
+### Admin Demo
+![](src/igotransit/assets/AdminDemo.gif)
+
+### User Demo
+![](src/igotransit/assets/UserDemo.gif)
+
