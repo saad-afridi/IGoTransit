@@ -22,6 +22,6 @@ To use this program, clone the repository and run IGoTransit.java in src/igotran
 **Username**: admin | **Password**: admin 
 
 #### Logging in as a User
-**Username**: Cardholder Account Number | **Password**: CardHolder Account number 
-(you can find them at testing-files/CardHolders.txt) 
+**Username**: Cardholder Account Number | **Password**: CardHolder Account Number 
+(you can find them ![here](../src/testing-files/CardHolders.txt))
    
