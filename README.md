@@ -5,8 +5,8 @@ A Java program that simulates electronic transit systems in Canada ie. PRESTO, T
 
 
 
-### Tools and Technology
-![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/GUI-JavaFX-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Editor-Eclipse-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/OS-Windows-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a)
+### Technology and Tools
+![](https://img.shields.io/badge/Code-Java-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Code-CSS-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/GUI-JavaFX-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Editor-Eclipse-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/OS-Windows-informational?style=flat&logo=logo_name&logoColor=white&color=2bbc8a) 
 
 
 ### Admin Demo
