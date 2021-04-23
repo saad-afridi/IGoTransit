@@ -19,8 +19,16 @@ From your command line, clone and run IGoTransit.java in src/igotransit
 ```bash
 # Clone this repository
 $ git clone https://github.com/saad-afridi/IGoTransit
+
+# Go into program
+cd src/igotransit
+
+# Compile program
+javac IGoTransit.java
+
+# Run the program
+java IGoTransit
 ``` 
-> src -> igotransit -> IGoTransit.java
 
 #### Logging in as an Admin
 > **Username**: admin | **Password**: admin 
