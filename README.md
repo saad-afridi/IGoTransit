@@ -21,7 +21,7 @@ From your command line, clone and run IGoTransit.java in src/igotransit
 $ git clone https://github.com/saad-afridi/IGoTransit
 
 # Go into program
-cd src/igotransit
+cd IGoTransit/src/igotransit
 
 # Compile program
 javac IGoTransit.java
